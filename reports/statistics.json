@@ -1,0 +1,77 @@
+{
+  "alpha": 0.05,
+  "hypothesis": "H0: P(low review | late) = P(low review | on time); H1: unequal",
+  "test": "Two-sided pooled two-proportion z-test",
+  "primary_sample": "First eligible reviewed order per customer in reporting cohort",
+  "n_late": 5831,
+  "low_late": 3721,
+  "n_ontime": 80541,
+  "low_ontime": 7557,
+  "rate_late": 0.6381409706739839,
+  "rate_ontime": 0.09382798822959734,
+  "rate_late_ci": [
+    0.6257197304255617,
+    0.6503803163999791
+  ],
+  "rate_ontime_ci": [
+    0.09183353905938879,
+    0.0958611808631755
+  ],
+  "risk_difference": 0.5443129824443865,
+  "risk_difference_ci": [
+    0.5317264387728992,
+    0.5567137651331115
+  ],
+  "risk_ratio": 6.801179293245116,
+  "risk_ratio_ci": [
+    6.607549225740872,
+    7.000483567896486
+  ],
+  "z_statistic": 119.1232534109906,
+  "p_value": 0.0,
+  "log10_p_value": -3083.569329847396,
+  "p_display": "< 1e-300",
+  "sensitivity": [
+    {
+      "sample": "all_eligible_reviewed_orders",
+      "n": 89230,
+      "groups": [
+        {
+          "is_late": false,
+          "n": 83237,
+          "low_reviews": 7807
+        },
+        {
+          "is_late": true,
+          "n": 5993,
+          "low_reviews": 3817
+        }
+      ],
+      "risk_difference": 0.5431173039738258
+    },
+    {
+      "sample": "answers_on_or_after_actual_delivery",
+      "n": 82086,
+      "groups": [
+        {
+          "is_late": false,
+          "n": 80434,
+          "low_reviews": 7542
+        },
+        {
+          "is_late": true,
+          "n": 1652,
+          "low_reviews": 329
+        }
+      ],
+      "risk_difference": 0.10538622464654672
+    }
+  ],
+  "standardized_state_month_rd": 0.49773760724731686,
+  "standardized_strata": 108,
+  "standardized_sample_n": 62658,
+  "eligible_reviewed_orders": 89230,
+  "primary_customers": 86372,
+  "independence_note": "One observation per customer reduces repeat-customer dependence; shared seller/region/time shocks can still correlate outcomes.",
+  "interpretation": "Association in an observational, reviewed-delivered sample; not an A/B test and not proof of causality."
+}

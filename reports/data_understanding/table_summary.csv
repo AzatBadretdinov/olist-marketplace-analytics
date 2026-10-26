@@ -1,0 +1,10 @@
+﻿table,rows,columns,extra_full_duplicates,candidate_key,null_key_rows,all_duplicate_key_rows,key_status
+customers,99441,5,0,customer_id,0.0,0.0,OK
+orders,99441,8,0,order_id,0.0,0.0,OK
+order_items,112650,7,0,"order_id, order_item_id",0.0,0.0,OK
+order_payments,103886,5,0,"order_id, payment_sequential",0.0,0.0,OK
+order_reviews,99224,7,0,"review_id, order_id",0.0,0.0,OK
+products,32951,9,0,product_id,0.0,0.0,OK
+sellers,3095,4,0,seller_id,0.0,0.0,OK
+geolocation,1000163,5,261831,,,,NOT_SELECTED
+category_translation,71,2,0,product_category_name,0.0,0.0,OK

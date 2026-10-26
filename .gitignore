@@ -1,0 +1,12 @@
+.venv/
+.idea/
+__pycache__/
+.ipynb_checkpoints/
+node_modules/
+.env
+*.log
+data/*.csv
+exports/*.csv
+exports/workbook_source.json
+work/
+

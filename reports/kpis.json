@@ -1,0 +1,17 @@
+{
+  "all_orders": 92580,
+  "delivered_orders": 89860,
+  "delivered_gmv": 12342450.49,
+  "delivered_freight": 2045177.88,
+  "average_order_value": 137.35199744046295,
+  "delivery_eligible": 89852,
+  "late_orders": 6138,
+  "late_rate": 0.06831233584116102,
+  "mean_delivery_days": 12.878140332440715,
+  "median_delivery_days": 10.615949074074074,
+  "p90_delivery_days": 23.60765393518522,
+  "review_coverage": 0.9930781215223681,
+  "low_review_rate": 0.13026961608283466,
+  "unique_buyers": 89503,
+  "gmv_yoy_jan_jul": 1.615902269502166
+}

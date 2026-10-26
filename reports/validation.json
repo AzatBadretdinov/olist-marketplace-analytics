@@ -1,0 +1,84 @@
+{
+  "checks": [
+    {
+      "check": "one_row_per_order",
+      "passed": true,
+      "detail": "99441"
+    },
+    {
+      "check": "same_order_ids",
+      "passed": true,
+      "detail": "raw vs SQL"
+    },
+    {
+      "check": "item_gmv_per_order",
+      "passed": true,
+      "detail": "Independent per-order raw aggregation"
+    },
+    {
+      "check": "freight_value_per_order",
+      "passed": true,
+      "detail": "Independent per-order raw aggregation"
+    },
+    {
+      "check": "payment_value_per_order",
+      "passed": true,
+      "detail": "Independent per-order raw aggregation"
+    },
+    {
+      "check": "latest_review_selection",
+      "passed": true,
+      "detail": "Latest answer timestamp; then creation date and review_id"
+    },
+    {
+      "check": "cohort_orders",
+      "passed": true,
+      "detail": "SQL aggregate=92580; fact=92580"
+    },
+    {
+      "check": "delivered_orders",
+      "passed": true,
+      "detail": "SQL aggregate=89860; fact=89860"
+    },
+    {
+      "check": "eligible_delivery",
+      "passed": true,
+      "detail": "SQL aggregate=89852; fact=89852"
+    },
+    {
+      "check": "late_orders",
+      "passed": true,
+      "detail": "SQL aggregate=6138; fact=6138"
+    },
+    {
+      "check": "gmv_monthly",
+      "passed": true,
+      "detail": "SQL aggregate=12342450.49; fact=12342450.49"
+    },
+    {
+      "check": "gmv_categories",
+      "passed": true,
+      "detail": "SQL aggregate=12342450.489999998; fact=12342450.49"
+    },
+    {
+      "check": "late_calendar_definition",
+      "passed": true,
+      "detail": "Date comparison, not midnight timestamp comparison"
+    },
+    {
+      "check": "delivered_orders_have_items",
+      "passed": true,
+      "detail": "Required for merchandise AOV"
+    }
+  ],
+  "exclusions": {
+    "delivered_ineligible": 8,
+    "delivered_missing_review": 622
+  },
+  "python": "3.13.3",
+  "pandas": "3.1.0",
+  "numpy": "2.5.4",
+  "sql_source": "Actual PostgreSQL COPY exports from analytics views",
+  "report_start": "2017-01-01",
+  "report_end_exclusive": "2018-08-01"
+}

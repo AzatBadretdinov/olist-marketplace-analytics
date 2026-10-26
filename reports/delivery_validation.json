@@ -1,0 +1,123 @@
+{
+  "checks": [
+    {
+      "check": "python_syntax",
+      "file": "data_understand.py",
+      "passed": true
+    },
+    {
+      "check": "python_syntax",
+      "file": "scripts\\build_analysis.py",
+      "passed": true
+    },
+    {
+      "check": "python_syntax",
+      "file": "scripts\\load_database.py",
+      "passed": true
+    },
+    {
+      "check": "python_syntax",
+      "file": "scripts\\make_notebooks.py",
+      "passed": true
+    },
+    {
+      "check": "python_syntax",
+      "file": "scripts\\refresh_from_postgres.py",
+      "passed": true
+    },
+    {
+      "check": "executed_notebook",
+      "file": "01_data_understanding.ipynb",
+      "cells": 4,
+      "passed": true
+    },
+    {
+      "check": "executed_notebook",
+      "file": "02_marketplace_analysis.ipynb",
+      "cells": 7,
+      "passed": true
+    },
+    {
+      "check": "executed_notebook",
+      "file": "03_statistical_analysis.ipynb",
+      "cells": 5,
+      "passed": true
+    },
+    {
+      "check": "xlsx_native_features",
+      "charts": [
+        {
+          "file": "xl/drawings/charts/chart1.xml",
+          "formulas": [
+            "'Monthly'!$Q$6:$Q$24",
+            "'Monthly'!$D$6:$D$24"
+          ],
+          "colors": [
+            "245A81",
+            "245A81",
+            "CCCCCC",
+            "CCCCCC",
+            "D9D9D9"
+          ]
+        },
+        {
+          "file": "xl/drawings/charts/chart2.xml",
+          "formulas": [
+            "'Monthly'!$Q$6:$Q$24",
+            "'Monthly'!$L$6:$L$24"
+          ],
+          "colors": [
+            "DB7650",
+            "DB7650",
+            "CCCCCC",
+            "CCCCCC",
+            "D9D9D9"
+          ]
+        },
+        {
+          "file": "xl/drawings/charts/chart3.xml",
+          "formulas": [
+            "'Regions'!$A$6:$A$15",
+            "'Regions'!$E$6:$E$15"
+          ],
+          "colors": [
+            "245A81",
+            "CCCCCC",
+            "CCCCCC",
+            "D9D9D9"
+          ]
+        },
+        {
+          "file": "xl/drawings/charts/chart4.xml",
+          "formulas": [
+            "'Categories'!$A$6:$A$15",
+            "'Categories'!$D$6:$D$15"
+          ],
+          "colors": [
+            "245A81",
+            "CCCCCC",
+            "CCCCCC",
+            "D9D9D9"
+          ]
+        }
+      ],
+      "validations": 3,
+      "formula_errors": 0,
+      "passed": true
+    },
+    {
+      "check": "readme_local_links",
+      "passed": true
+    }
+  ],
+  "pipeline_validation_checks": 14,
+  "notebooks": 3,
+  "figures": 6,
+  "desktop_excel_tested": false,
+  "artifact_filter_tests": [
+    "ALL",
+    "SP",
+    "single month",
+    "invalid month range"
+  ]
+}

@@ -1,13 +1,14 @@
 // Rebuild the Excel dashboard from exports/workbook_source.json.
-// Requires the Codex bundled @oai/artifact-tool package; set ARTIFACT_NODE_MODULES.
+// Requires Node.js and @oai/artifact-tool; external modules can use ARTIFACT_NODE_MODULES.
 import fs from "node:fs/promises";
 import path from "node:path";
 import {fileURLToPath, pathToFileURL} from "node:url";
 import {createRequire} from "node:module";
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),"..");
 const moduleRoot=process.env.ARTIFACT_NODE_MODULES;
-if(!moduleRoot) throw new Error("Set ARTIFACT_NODE_MODULES to the bundled node_modules directory.");
-const resolvePackage=createRequire(pathToFileURL(path.join(moduleRoot,"_resolve.cjs")));
+const resolvePackage=moduleRoot
+  ? createRequire(pathToFileURL(path.join(moduleRoot,"_resolve.cjs")))
+  : createRequire(import.meta.url);
 const {Workbook,SpreadsheetFile}=await import(pathToFileURL(resolvePackage.resolve("@oai/artifact-tool")));
 const data=JSON.parse(await fs.readFile(path.join(root,"exports/workbook_source.json"),"utf8"));
 const output=process.env.OLIST_WORKBOOK_OUTPUT || path.join(root,"reports/marketplace_dashboard.xlsx");

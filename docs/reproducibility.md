@@ -16,7 +16,7 @@ GMV, freight и payments совпадают с raw.
 - nbformat 5.11.1
 - nbclient 0.11.0
 - ipykernel 7.4.0
-- @oai/artifact-tool из bundled runtime Codex
+- Node.js и @oai/artifact-tool для сборки Excel
 
 requirements.txt задаёт совместимые диапазоны; requirements-lock.txt фиксирует основные версии расчёта.
 Для чистого запуска сначала получи исходные CSV; exports/ генерируется заново.
@@ -31,3 +31,19 @@ Excel проверен в Artifact Tool: пересчёт KPI, фильтры ш
 
 
 Дополнительно весь расчёт успешно выполнен в .venv проекта с pandas 3.1.0; остальные основные версии совпали. Сохранённый validation.json относится к этому финальному запуску.
+
+## Дополнительная сборка Excel
+
+Готовую книгу можно использовать в Excel без установки JavaScript-зависимостей.
+Для повторной сборки scripts/build_dashboard.mjs нужен Node.js и отдельно доступный пакет @oai/artifact-tool.
+Этот пакет не входит в Python requirements.txt. Сборщик ищет его среди локально установленных модулей.
+При внешней установке задай ARTIFACT_NODE_MODULES — путь к каталогу node_modules:
+
+```powershell
+$env:ARTIFACT_NODE_MODULES = "C:/path/to/node_modules"
+node scripts/build_dashboard.mjs
+```
+
+Результат по умолчанию: reports/marketplace_dashboard.xlsx.
+Сборка использует exports/workbook_source.json, подготовленный Python-пайплайном.
+Предпросмотры сохраняются в reports/workbook_previews/ и не нужны для использования готовой книги.
